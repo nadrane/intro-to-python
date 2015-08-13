@@ -15,7 +15,7 @@ If that project seems to easy, take a look at projects 1 and 2. And if those are
 http://learnpythonthehardway.org/book/  - A great Python book for those who have never programed. It will cover everything you need to solve all of the projects listed above
 
 
-https://docs.python.org/3/tutorial/ - If you know how to program and simply want to whet your palate, this tutorial will teach you what syntax and basic data structures Python offers.
+https://docs.python.org/3/tutorial/ - If you know how to program and simply want to whet your palate, this tutorial will teach you Python syntax and its basic data structures.
 
 http://www.diveintopython3.net/ - A great Python book if you have programming experience, just not in python. This book is good if you want to become a real Python programmer.
 
