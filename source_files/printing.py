@@ -1,0 +1,16 @@
+print ("Let’s print some more complicated statements")
+print ("How many friends do you have?", 25 + 30)
+print ("How many are girls?", 25 + 30 / 2)
+print ("That doesn’t look right...")
+print ((25 + 30) / 2)
+print ("better")
+print ("Is it true that (25 + 30) / 2 < 25 + 30 /2?")
+print ((25 + 30) / 2 < 25 + 30 / 2)
+
+print ("Is 5 greater?", 5 > -2)
+print ("Is 5 greater than or equal?", 5 >= -2)
+print ("Is 5 less than or equal?", 5 <= -2)
+
+print ("is 5 equal to -2", 5 == -2)
+print ("but 5 is not equal to -2", 5 != -2)
+print ("but it is equal to 5?", 5 == 5)

@@ -1,0 +1,183 @@
+﻿1. Goals
+   1. Learn what programming is through Python
+   2. Learn about the tools a programmer needs to write code
+   3. Learn the basic programming constructs that apply across all languages
+   4. Combine all these constructs to build a calculator
+
+
+1. What is programming?
+   1. Programming is the process communicating with computers.
+   2. But computers don’t understand english, so we talk with them using what’s called a programming language. In this class we will use a language called Python.
+
+
+1. Why Python
+   1. You are going to hear A LOT of debate over languages and frameworks and what tools are better than others. Should I pick Python or Ruby or Django or Ruby on Rails. Ignore all of it.
+   2. Learn one thing and become a master of that domain.
+      1. Despite the fact that many employers screen based on experience with a specific language, the concepts you will learn in python apply across the board to almost any language and are highly transferrable.
+   1. So why did I pick python?
+      1. It reads like English, making it very easy for beginners.
+      2. It’s general purpose and can used to solve problems related from systems administration to scientific data analysis to web programming.
+      3. It’s popular. 5th of the TIOBE index
+         1. I don’t mean to contradict my previous statement
+         2. Although your skills are transferrable, there is always a learning curve to starting with a new language. Why not start with one lots of people use?
+   1. There are actually two popular editions of python: python 2 and python 3. We are going to use python 3 since it is becoming the standard for new projects in the python community.
+
+
+1. Cloud9 service ­ http://c9.io 
+   1. Make sure to sign up.
+   2. Create a workspace, give it a name, and select custom.
+
+
+1. Setup
+   1. Every programmer needs three tools: a text editor, a terminal, and a programming language.
+   2. Cloud 9 covers all of these for us. It comes with Python preinstalled and a built-in text editor and terminal. This way we can avoid installing of these separately for each of you and ensure that everyone is using the same tools because it will make it far easier to follow along.
+
+
+1. Terminal
+   1. The Terminal is a special program that comes with your computer in which you can issue commands to your computer. You can tell it to do things like create files and folders, run programs, and many other things.
+   2. While a graphical interfaces on your computer, such as Finder in Mac and File Explorer in Windows, can accomplish many of the same tasks, the Terminal affords programmers more flexibility and power. It can execute commands that graphical interfaces cannot.  In particular, we can use the terminal to run Python on a particular file.
+
+
+1. Python Interpreter
+   1. Python is actually a computer program, and this program is installed on the cloud9 machine. We call this program the interpreter, and it’s job is to read in Python code and according to the grammar of Python
+   2. We can run the interpreter in two ways. Let’s look at the first
+   3. Type python3 into your terminal, and you will be greeted with “>>>”
+   4. This is what is called a REPL, a Read, Evaluate, Print, Loop.
+   5. The interpreter wants us to enter python code. it will then read it in, evaluate it, print out a result, and then ask for more input. We can execute code in this manner line by line. 
+   6. This is not how Python programs are normally run, but you will see me use it frequently today for demonstrations. 
+
+
+1.  A Built-In Calculator Demo
+   1. If you haven’t already, type python3 into your terminal.
+      1. If you omit the 3, you will actually run python 2
+   1. 1 + 1
+   2. 7 * 947 
+   3. 27 / 3
+   4. 5 ** 3 (It even handles exponentiation)
+   5. 5 ­ 1  (Our first error! This does not conform to Python syntax. Notice that Python does not spit out a response)
+
+
+1. Our First Program Demo
+   1. Click File > New File
+   2. Click File > Save File As > helloworld.py
+   3. print (“hello world”)
+   4. python3 helloworld.py
+   5. If you get an error like SyntaxError: EOL while scanning string literal
+      1. you probably forgot a quotation mark or parenthesis.
+   1. We can actually run this program at the interpreter as well
+
+
+1. Modify program to print multiple statements… Notice that there is a distinct order of operations.
+      1. print ("Let’s print some more complicated statements")
+      2. print ("How many friends do you have?", 25 + 30)
+      3. print ("How many are girls?", 25 + 30 / 2)
+      4. print ("That doesn’t look right...")
+      5. print ((25 + 30) / 2)
+      6. print ("better")
+      7. print ("Is it true that (25 + 30) / 2 < 25 + 30 /2?")
+      8. print ((25 + 30) / 2 < 25 + 30 / 2)
+      9. print ("I don't believe you...")
+      10. print ((25 + 30) / 2, " < ", 25 + 30 / 2)
+      11. print ("Perhaps you're right, Python")
+      12.       13. print ("Is 5 greater?", 5 > -2)
+      14. print ("Is 5 greater than or equal?", 5 >= -2)
+      15. print ("Is 5 less than or equal?", 5 <= -2)
+      16.       17. print ("is 5 equal to -2", 5 == -2)
+      18. print ("but 5 is not equal to -2", 5 != -2)
+      19. print ("but it is equal to 5?", 5 == 5)
+1. Strings Demo
+   1. So we’ve seen both numerical values, called integers, and strings values. What is the difference between the two? In the simplest terms, strings are surrounded by quotes and integers are not, plus integers are always numbers.
+   2. “cat”              # Notice that strings are always surrounded by quotes
+   3. ‘fish’              # Single quotes work too as long as you’re consistent on each side
+   4. fish                # But we get an error if we forget quotes
+   5. “cat” + “fish”  # We can even add strings (called concatenation)
+   6. “cat” - “fish”   # But we can’t subtract them like we can with integers
+   7. 5 - 5              # These are integers because there are no quotes
+   8. “5” - “5”         # Why does this error out?
+
+
+   1. Why do some operators work on integers but not strings? This demonstrates that programming languages all have rules. In some languages, it might be illegal to multiply a string by a number. In others, it might be illegal to add two strings. There are many many arbitrary things about every language, and it will be your job to learn these peculiarities. 
+   2. The important part to understand is that python treats strings and integers differently when interacting with operators.
+   3. Generally we use strings when we are looking to make something human-readable, such as when we print data, and we use integers for calculations.
+
+
+   1. What happens if we try execute an operator over a string and an integer at the same time?
+   2. “cat” + 6    # It turns out it’s simply a rule that you cannot add strings and integers
+   3. In general, in Python these rules will be very intuitive. Ask yourself if there is an obvious result for a specific operation. If there is, Python likely works that way; if not, it’s probably not allowed.
+
+
+   1. It turns out we can convert integers to strings using the “str” command
+   2. “cat” + str(6)
+   3. str(6) + str(6)    # Notice that the answer is not 12, but 66. The strings were concatenated, just cat “cat” and “fish”
+
+
+   1. We can also convert strings to integers
+   2. int(“23”) + int(“23”)
+   3. “23” + “23”
+   4. int (“23”) + int(“23”) == 23 + 23
+   5. int(“23”) + int(“23”) != “23” + “23”
+
+
+   1. But we can’t just convert any string… It needs to actually be a number
+   2. int(“cat”)     # Will crash
+   3. int(“fish”)   # Will crash
+
+
+1. Variables ­ Demo:
+   1. Variables will allow us to store an integer, a string, a calculation, or really anything (this is not an exaggeration).
+   2. We are basically naming the integer or string and defining a new way to reference it (by it’s name).
+   3. x = 42 ­     # This is not algebra. This means that we are setting x to be 42.
+   4. print (x)    # Python remembered that x is equal to 42!
+   5. y = 2
+   6. print (x / y)
+   7. x = 10           # Let’s change the value of x
+   8. print (x * y) ­­­   # x was overwritten!
+
+
+   1. Setting variables has nothing to do with algebra. 
+   2. a + 1 = 4 ­­­­­ # This will never work
+   3. a = 1 + 4  # But this will
+   4. a = 5        # The variable must always be alone on the lefthand side of the equals sign.
+
+
+   1. my_name = “nick”
+   2. your_name = “student”
+   3. print(my_name + “ “ + your_name)  # Variables behave just like the strings they contain! Notice that the strings were properly added (also called concatenation)
+
+
+   1. We can convert the type of a variable just like you’d expect
+   2. my_number = 55
+   3. my_name = “nick”
+   4. print (my_name + my_number)          # Fails as expected
+   5. my_number = str(my_number)
+   6. print (my_name + my_number)          # Python remembered that my_number is a string!
+
+
+1.  Reading Input
+   1. A program is not much use if it does the same thing every time. Let’s make a program that changes based on user input. We will use the input command for this.
+
+
+   1. number_to_square = input("Please enter a number to square: ")
+   2. print (number_to_square * number_to_square)
+
+
+   1. TypeError: can't multiply sequence by non-int of type 'str'
+   2. Remember when I said strings are used for human readable tasks? That includes asking for input. This means we are trying to use a string in a calculation, but I said integers are for calculations.
+   3. So let’s turn our string into an integer.
+
+
+   1. number_to_square = input("Please enter a number to square: ")
+   2. number_to_square = int(number_to_square)
+   3. print (number_to_square * number_to_square)
+
+
+1. Make Our Own Calculator Demo
+   1. Program a calculator (first_calculator.py)
+   2. show bug with string operand (cannot fix without try)
+   3. show bug with operator that is not specified >>> lead into elif and else introduction (if_elif_else.py)
+   4. show bug with divide by 0 (fix_divide_by_zero.py)
+   5. Show bug with null operator and operands. Explain truthyness (fix_null_inputs.py)
+   6. Show necessity of AND statement (actually_fix_null_inputs.py)
+   7. Explain functions and add all option (functions.py)
+   8. Explain looping (looping.py)
+   9. Explain lists (store_history.py)
